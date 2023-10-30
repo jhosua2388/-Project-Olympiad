@@ -1,17 +1,26 @@
+{% extends "homepage/base.html" %}
 {% load static %}
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <!-- Vinculación con css-->
-    <link rel="stylesheet" href="{% static '/css/styles.css' %}">
-    <title>Home</title>
-</head>
-<body>
+{% block content %}
+   
+    <section id="inicio">
+     
+    <article>
+            <h1>LOREM IPSUM DOLOR SIT</h1>
+                     
 
+        <p class="parrafo">Lorem ipsum dolor sit umquam! Lorem ipsum dolor sit, amet consectetur adipisicing elit. Quam libero id obcaecati perspiciatis laborum earum pariatur, vel doloremque ab saepe ullam, quas, nihil sint tempora illum voluptatibus odio nostrum consequatur.
+            <br>
+            Lorem ipsum dolor sit amet adipisicing elit. necessitatibus. Dolorum veniam delectus non ipsam molestias repudiandae, pariatur maxime porro necessitatibus alias officiis officia nostrum magnam ea nulla!
+            <br>
+            Lorem ipsum dolor sit amet consectetur adipisicing elit. Beatae quas, error porro asperiores nostrum fuga ipsum mollitia consequatur aspernatur aliquam minus repudiandae possimus modi excepturi sequi inventore nam. Esse, illum!
+        </p>
+    </article>
+    </section>
 
-    <!-- Vinculación con javascript-->
-    <script src="{% static '/js/script.js' %}"></script>
-</body>
-</html>
+<div id="label">
+    <p><strong>Te ha resultado útil la información</strong></p>
+    <i class="fa-regular fa-thumbs-up"></i>"
+    <i class="fa-solid fa-thumbs-down"></i>
+</div>
+
+{% endblock %}
