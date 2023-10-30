@@ -1,0 +1,264 @@
+/* Reset */
+*{ 
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+    /* Para que el scrolleo en la pagina sea suave */
+    scroll-behavior: smooth;
+}
+
+/* Para quitar los puntos a los items de listas */
+ul {
+    list-style: none;
+}
+body{
+font-family: 'Fira Sans', sans-serif;
+font-family: 'Istok Web', sans-serif;
+font-family: 'Montserrat', sans-serif;
+font-family: 'Nunito Sans', sans-serif;
+font-family: 'Poppins', sans-serif;
+line-height: 1.4;
+
+}
+
+  header {  
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width:100%;
+    height: 90px;
+    padding: 60px;
+    position: fixed;
+    background-color: #fff;
+    color: black;
+    box-shadow:3px 3px 8px #303030
+ }
+
+header #back{  
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width:100%;
+    height: 90px;
+    padding: 60px;
+    position: fixed;
+    background-color: #0047ab;
+    color: black;
+    box-shadow:3px 3px 8px #303030
+ }
+
+header #logo {
+    padding: 60px;  
+}
+
+nav ul {
+    list-style: none;
+    display: flex;
+}
+nav ul li {
+    margin-right:60px;
+}
+nav ul li a {
+    color: #000000;
+    text-decoration: none;
+}
+.boton{
+    display: inline;
+    background-color: #0047ab;
+    color: #fff;
+    font-size: 16px;
+    padding: 5px 10px;
+    border: none;
+    border-radius: 15px;
+    text-align: center;
+    text-decoration: none;
+}
+
+/* Estilos para el menú de navegación */
+
+#fijo {
+    position: fixed; /* Hace que el contenido se quede fijo */
+    top: 120px; /* Fija la posición en la parte superior de la ventana */
+    left: 0; /* Fija la posición en el borde izquierdo */
+    width: 100%; /* Ancho del contenido fijo al 100% de la ventana */
+    background-color: #0047ab; 
+    z-index: 100; /* Controla la capa de apilamiento, para que esté encima del contenido desplazable */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+}
+
+#fijo2 {
+    position: fixed; /* Hace que el contenido se quede fijo */
+    top: 20px; /* Fija la posición en la parte superior de la ventana */
+    left: 0; /* Fija la posición en el borde izquierdo */
+    width: 100%; /* Ancho del contenido fijo al 100% de la ventana */
+    background-color: #0047ab; 
+    z-index: 100; /* Controla la capa de apilamiento, para que esté encima del contenido desplazable */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+}
+
+.menu ul li {
+    margin: 20px;    
+}
+
+.menu ul li a {
+    color: #fff;
+    text-decoration: none;
+}
+
+.menu2 ul li {
+    margin: 20px;    
+}
+
+.menu2 ul li a {
+    color: #000000;
+    text-decoration: none;
+}
+
+section {
+    max-width: 1910px;
+   
+    
+}
+
+#inicio{
+    background-image: url("https://images.pexels.com/photos/8766267/pexels-photo-8766267.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2");
+    background-size: cover;
+    background-position: center;
+    background-attachment: fixed; /* Opcional: hace que el fondo se mantenga fijo mientras se desplaza la página */
+    height: 110vh; /* Ajusta la altura de la sección a la altura de la ventana del navegador */
+    color:#fff;
+    padding: 250px;
+
+}
+
+h1{
+    font-size: 46px;
+    display: flex;
+    justify-content: end;
+    padding-top: 100px;
+}
+.parrafo {
+    font-size: 18px;
+    display: flex;
+    text-align: end;
+    margin-left: 40px;
+ }
+  
+#quienes-somos {
+color: #150d0d;
+background-image: url("https://images.pexels.com/photos/8766267/pexels-photo-8766267.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2");
+justify-content:center;
+align-items:center;
+text-align: center;
+padding-top: 250px;
+
+
+
+
+}
+
+
+h2 {
+    font-size: 46px;
+    display: flex;
+    justify-content: center;
+    align-items:center;
+    color: #000000;
+
+
+
+}
+.parrafo2{
+    display: flex;
+    justify-content: end;
+    align-items: end;
+    text-align: end;
+    color: #000000;
+}
+
+#fotos .nosotros{ 
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 60px;
+    margin: 20px;
+}
+
+.nosotros li {
+    list-style: none;
+     
+}
+
+.nosotros img{
+
+        width: 200px; 
+        height: 200px; 
+        border-radius: 50%; 
+}
+
+
+#servicios, #contacto {
+    
+    background-image: url("https://images.pexels.com/photos/8766267/pexels-photo-8766267.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2");
+    
+    justify-content:center;
+    align-items:center;
+    text-align: center;
+    padding-top: 250px;
+          
+}
+    
+
+h3 {
+    font-size: 60px;    
+    display: flex;  
+    justify-content:end;
+    color: #fff;
+    padding: 10px;
+    margin-right: 200px;
+    margin-left: 150px;
+}
+
+p .stroke{
+    font-size: 18px;
+    display: flex;
+    justify-content: center;
+    text-align: center;
+    color: #fff;
+
+}
+
+.stroke {
+    text-shadow:3px 3px 3px #4d4d4d;
+
+}
+
+  
+.iconos {
+    font-size: 60px;
+    display:block;
+    padding: 1px;
+    
+}
+#label{
+    display:block;
+    text-align: center;
+}
+ 
+footer{
+    background-color: #0047ab;
+    color: #fff;
+    height: 70px;
+    display: flex;
+    justify-content: center;    
+    text-align: center;
+    padding: 25px;
+    
+    box-shadow: 5px 5px 5px #4d4d4d;
+}

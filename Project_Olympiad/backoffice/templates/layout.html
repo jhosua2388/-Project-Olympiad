@@ -1,0 +1,82 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- Vinculación con css-->
+    <link rel="stylesheet" href="{% static '/css/styles.css' %}">
+    <title>{% block title %}Homepage{% endblock title %}</title>
+</head>
+<body>
+
+{% if user.is_authenticated %}
+    <!-- <section id="segundo-menu" class=""> -->
+        <div id="">
+            <nav class="menu2" role="navigation">
+
+                <a href="#" class="">Hermanos sin Fronteras</a>
+
+                <div class="" id="">
+                    <ul class="">
+                        <li class="">
+                            <a aria-expanded="false" role="button" href="#" class="" data-toggle="dropdown"> Usuarios</a>
+                            <ul role="menu" class="">
+                                <li><a href="">Listado de usuarios</a></li>
+                                <li><a href="">Crear usuario</a></li>
+                                <li><a href="">Modificar usuario</a></li>
+                                <li><a href="">Eliminar usuario</a></li>
+                            </ul>
+                        </li>
+                        <li class="">
+                            <a aria-expanded="false" role="button" href="#" class="" data-toggle="dropdown"> Registro</a>
+                            <ul role="menu" class="">
+                                <li><a href="">Listado general</a></li>
+                                <li><a href="">Crear registro</a></li>
+                                <li><a href="">Confirmar registro</a></li>
+                                <li><a href="">Modificar registro</a></li>
+                                <li><a href="">Eliminar registro</a></li>
+                            </ul>
+                        </li>
+                        <li class="">
+                            <a aria-expanded="false" role="button" href="#" class="" data-toggle="dropdown"> Dashboard</a>
+                            <ul role="menu" class="">
+                                <li><a href="">Estadisticas</a></li>
+                                <li><a href="">Paises</a></li>
+                            </ul>
+                        </li>
+                    </ul>
+                    <ul class="">
+                        <li>
+                            <a class="boton" href="{% url 'inicio' %}">Log out</a>
+                        </li>
+                    </ul>
+                </div>
+            </nav>
+        </div>
+    <!--</section>-->
+{% endif %}
+
+<div>
+    {% if messages %}
+        {% for message in messages %}
+            <div class="notification {{ menssage.tags }}">
+                {{message}}
+            </div>
+        {% endfor%}
+    {% endif %}
+</div>
+
+
+
+<div>
+    {% block context %}
+    {% endblock %}  
+</div>
+
+
+
+    <!-- Vinculación con javascript-->
+    <script src="{% static '/js/script.js' %}"></script>
+</body>
+</html>

@@ -1,0 +1,65 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="es">   
+<head>
+    <title>{% block title %}Hermanos sin Fronteras{% endblock title %}</title>
+    <!-- Vinculación con css-->
+    <link rel="stylesheet" href="{% static '/css/styles.css' %}">
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Fira+Sans:wght@300;400;500;800&family=Istok+Web:ital,wght@0,400;0,700;1,400&family=Montserrat:wght@800;900&family=Nunito+Sans:ital,opsz,wght@0,6..12,200;0,6..12,300;0,6..12,500;0,6..12,800;0,6..12,900;0,6..12,1000;1,6..12,500&family=Poppins:ital,wght@0,400;0,500;1,400&display=swap" rel="stylesheet">
+    <script src="" crossorigin="anonymous"></script>
+    <script src="https://kit.fontawesome.com/c9b21cf1e5.js" crossorigin="anonymous"></script>
+</head>
+
+<body>
+    <header>
+        <a href="{% url 'inicio' %}">
+        <div id="logo"> 
+            <img src="{% static '/imagenes/logo2.png' %}" alt= "Logo de Hermanos sin Fronteras">
+        </div> 
+        </a>      
+        
+        <nav>
+            <ul>
+                <li><a href="{% url 'login' %}"><strong>Login</strong></a></li>
+                <li><a href="#"><strong>Registrarse</strong></a></li>
+                <li><a class="boton" href="#">Donar</a></li>      
+            </ul>
+        </nav>
+    </header>
+    <section id="segundo-menu">
+   <div id="fijo">
+    
+    <nav class="menu">
+        <ul>
+            <li><a href="{% url 'inicio' %}">Inicio</a></li>
+            <li><a href="{% url 'quienes' %}">Quienes somos</a></li>
+            <li><a href="{% url 'servicios' %}">Servicios</a></li>
+            <li><a href="{% url 'contacto' %}">Contacto</a></li>
+        </ul>
+
+    </nav>
+   </div>
+    {% if messages %}
+        {% for message in messages %}
+            <div class="notification {{ menssage.tags }}">
+                {{message}}
+        </div>
+        {% endfor%}
+    {% endif %}
+    </section>
+   <!-- Contenido Cambiante -->
+{% block content %}
+
+{% endblock %}
+    
+<footer>
+    <p> <small>Hermanos sin Fronteras @Team-Green-4 | Todos los Derechos Reservados 2023</small></p>
+ </footer>
+
+ <!-- Vinculación con javascript-->
+ <script src="{% static '/js/script.js' %}"></script>
+</body>
+</html>
