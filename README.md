@@ -4,6 +4,7 @@ Olimpiada COPA 2023, TeamGreen4
 1.- Clonar el repositorio:
 
 $ git clone https://github.com/jhosua2388/Project-Olympiad.git
+
 $ cd Project_Olympiad
 
 2.- Instalar Python:
