@@ -134,3 +134,10 @@ DEFAULT_AUTO_FIELD = 'django.db.models.BigAutoField'
 
 LOGIN_REDIRECT_URL = 'homeback'
 LOGOUT_REDIRECT_URL = 'home'
+
+#Configuracion smtp para envio de correo electronico en mailtrap credenciales obtenida de la pagina de mailtrap
+
+EMAIL_HOST = 'sandbox.smtp.mailtrap.io'
+EMAIL_HOST_USER = '2922427c726085'
+EMAIL_HOST_PASSWORD = '00ffb121be2167'
+EMAIL_PORT = '2525'

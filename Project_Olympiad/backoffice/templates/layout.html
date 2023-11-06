@@ -7,54 +7,68 @@
     <!-- Vinculación con css-->
     <link rel="stylesheet" href="{% static '/css/styles.css' %}">
     <title>{% block title %}Homepage{% endblock title %}</title>
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Fira+Sans:wght@300;400;500;800&family=Istok+Web:ital,wght@0,400;0,700;1,400&family=Montserrat:wght@800;900&family=Nunito+Sans:ital,opsz,wght@0,6..12,200;0,6..12,300;0,6..12,500;0,6..12,800;0,6..12,900;0,6..12,1000;1,6..12,500&family=Poppins:ital,wght@0,400;0,500;1,400&display=swap" rel="stylesheet">
+    <script src="" crossorigin="anonymous"></script>
+    <script src="https://kit.fontawesome.com/c9b21cf1e5.js" crossorigin="anonymous"></script>
+
 </head>
 <body>
 
 {% if user.is_authenticated %}
     <!-- <section id="segundo-menu" class=""> -->
-        <div id="">
+        <div id="header">
             <nav class="menu2" role="navigation">
 
-                <a href="#" class="">Hermanos sin Fronteras</a>
+                <a href="#" class="logo">Hermanos sin Fronteras</a>
 
-                <div class="" id="">
-                    <ul class="">
-                        <li class="">
-                            <a aria-expanded="false" role="button" href="#" class="" data-toggle="dropdown"> Usuarios</a>
-                            <ul role="menu" class="">
+                <div id="menu">
+                    <ul class="primary-menu">
+                        <li class="menu-item">
+                            <a aria-expanded="false" role="button" href="#" class="menu-link" data-toggle="dropdown" id="menu-back-1"> Usuarios</a>
+                            <ul role="menu" class="submenu" id="sub-menu-back-1">
                                 <li><a href="">Listado de usuarios</a></li>
-                                <li><a href="">Crear usuario</a></li>
+                                <li><a href="{% url 'create_user' %}">Crear usuario</a></li> <!--aqui por arreglar-->
                                 <li><a href="">Modificar usuario</a></li>
                                 <li><a href="">Eliminar usuario</a></li>
                             </ul>
                         </li>
-                        <li class="">
-                            <a aria-expanded="false" role="button" href="#" class="" data-toggle="dropdown"> Registro</a>
-                            <ul role="menu" class="">
+                        <li class="menu-item">
+                            <a aria-expanded="false" role="button" href="#" class="menu-link" data-toggle="dropdown"id="menu-back-2"> Registro</a>
+                            <ul role="menu" class="submenu" id="sub-menu-back-2">
                                 <li><a href="">Listado general</a></li>
-                                <li><a href="">Crear registro</a></li>
+                                <li><a href="{% url 'registro2' %}">Crear registro</a></li>
                                 <li><a href="">Confirmar registro</a></li>
                                 <li><a href="">Modificar registro</a></li>
                                 <li><a href="">Eliminar registro</a></li>
                             </ul>
                         </li>
-                        <li class="">
-                            <a aria-expanded="false" role="button" href="#" class="" data-toggle="dropdown"> Dashboard</a>
-                            <ul role="menu" class="">
+                        <li class="menu-item">
+                            <a aria-expanded="false" role="button" href="#" class="menu-link" data-toggle="dropdown" id="menu-back-3"> Dashboard</a>
+                            <ul role="menu" class="submenu" id="sub-menu-back-3">
                                 <li><a href="">Estadisticas</a></li>
                                 <li><a href="">Paises</a></li>
                             </ul>
                         </li>
                     </ul>
-                    <ul class="">
+                    <ul class="menu-item">
                         <li>
-                            <a class="boton" href="{% url 'inicio' %}">Log out</a>
+                            <a class="boton" href="{% url 'logout' %}">Log out</a>
                         </li>
                     </ul>
                 </div>
             </nav>
         </div>
     <!--</section>-->
+{% else %}
+    <form class="form" method="post">
+        {% csrf_token %}
+        {{ form.as_p }}
+
+        <button type="submit" id="submit">Login</button>
+    </form>
 {% endif %}
 
 <div>
