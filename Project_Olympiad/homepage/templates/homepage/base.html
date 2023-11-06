@@ -3,6 +3,7 @@
 <html lang="es">   
 <head>
     <title>{% block title %}Hermanos sin Fronteras{% endblock title %}</title>
+    <link rel="icon" href="{% static '/imagenes/logo2.png' %}" type="image/png" sizes="16x16">
     <!-- Vinculación con css-->
     <link rel="stylesheet" href="{% static '/css/styles.css' %}">
 
@@ -24,7 +25,7 @@
         <nav>
             <ul>
                 <li><a href="{% url 'login' %}"><strong>Login</strong></a></li>
-                <li><a href="#"><strong>Registrarse</strong></a></li>
+                <li><a href="{% url 'registro' %}"><strong>Registrarse</strong></a></li>
                 <li><a class="boton" href="#">Donar</a></li>      
             </ul>
         </nav>
@@ -41,19 +42,22 @@
         </ul>
 
     </nav>
-   </div>
-    {% if messages %}
-        {% for message in messages %}
-            <div class="notification {{ menssage.tags }}">
-                {{message}}
-        </div>
-        {% endfor%}
-    {% endif %}
-    </section>
-   <!-- Contenido Cambiante -->
+<section id="regla">
+</div>
+{% if messages %}
+    {% for message in messages %}
+        <div class="notification {{ menssage.tags }}">
+            {{message}}
+    </div>
+    {% endfor%}
+{% endif %}
+</section>
+<!-- Contenido Cambiante -->
 {% block content %}
 
 {% endblock %}
+</section>
+   
     
 <footer>
     <p> <small>Hermanos sin Fronteras @Team-Green-4 | Todos los Derechos Reservados 2023</small></p>

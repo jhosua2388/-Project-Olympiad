@@ -133,7 +133,8 @@ section {
     background-attachment: fixed; /* Opcional: hace que el fondo se mantenga fijo mientras se desplaza la página */
     height: 110vh; /* Ajusta la altura de la sección a la altura de la ventana del navegador */
     color:#fff;
-    padding: 250px;
+    /*padding: 250px;*/
+
 
 }
 
@@ -161,6 +162,10 @@ padding-top: 250px;
 
 
 
+}
+
+#registro{
+    padding-top: 250px;
 }
 
 
@@ -261,4 +266,161 @@ footer{
     padding: 25px;
     
     box-shadow: 5px 5px 5px #4d4d4d;
+}
+
+/* Estilo básico del menú */
+#header {
+    background-color: #0047ef; 
+    color: #fff; 
+    padding: 10px;
+    font-family: 'Fira Sans', sans-serif;
+    font-family: 'Istok Web', sans-serif;
+    font-family: 'Montserrat', sans-serif;
+    font-family: 'Nunito Sans', sans-serif;
+    font-family: 'Poppins', sans-serif;
+    line-height: 1.4;
+}
+    
+
+.logo {
+    text-decoration: none;
+    font-size: 24px;
+    font-weight: bold;
+    margin-right: 20px;
+}
+
+#menu {
+    display: flex;
+    align-items: center;
+}
+
+#primary-menu {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    display: flex;
+}
+
+.menu-item {
+    position: relative;
+}
+
+.menu-link {
+    text-decoration: none;
+    color: #fff;
+    padding: 10px 15px;
+}
+
+/* Estilo de los submenús */
+.submenu {
+    display: none; /*Modificar con javaSccript*/
+    position: absolute;
+    top: 100%;
+    left: 0;
+    background-color: #0047ef;
+    color: #fff;
+    box-shadow: 0 4px 8px #585858;
+    list-style: none;
+    margin: 0;
+    padding: 0;
+}
+
+.submenu.active2{
+    display: flex;
+}
+
+.submenu li {
+    margin: 0;
+    padding: 0;
+}
+
+.submenu a {
+    text-decoration: none;
+    display: block;
+    color: #fff;
+    padding: 10px 15px;
+    transition: background-color 0.2s;
+}
+
+/* Estilo del botón de log out */
+.boton {
+    background-color: #1a6124; 
+    border: none;
+    color: #fff;
+    padding: 10px 15px;
+    border-radius: 5px;
+    text-decoration: none;
+    transition: background-color 0.2s;
+    margin-left: 20px;
+}
+
+.boton:hover {
+    background-color: #0047ef; 
+}
+
+#regla {
+    padding-top: 200px;
+    margin-top: 200px;
+}
+
+/*Parte de Frederick*/
+#contacto{
+    background-image: url("https://images.pexels.com/photos/8766267/pexels-photo-8766267.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2");
+    background-size: cover;
+    background-position: center;
+    background-attachment: fixed; /* Opcional: hace que el fondo se mantenga fijo mientras se desplaza la página */
+    height: 110vh; /* Ajusta la altura de la sección a la altura de la ventana del navegador */
+    color:#fff;
+    padding: 250px;
+    align-items:center;
+    text-align: center;
+    justify-content:center;
+
+          
+}
+
+
+/* Estilo para el formulario */
+form {
+    background-color: #a1312982; /* Cambia este color al que desees */
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 0 10px rgba(210, 25, 25, 0.359);
+    margin: 0 auto;
+    max-width: 500px; /* Ajusta el ancho máximo según tus necesidades */
+}
+
+    /* Estilo para la tabla */
+table {
+    width: 100%;
+    border-collapse: collapse;
+}
+
+th, td {
+    padding: 10px;
+    text-align: left;
+    border-bottom: 1px solid #7a4a4a;
+}
+
+th {
+    background-color: #e1bbbb76;
+}
+
+/* Estilo para el botón de enviar */
+input[type="submit"] {
+    background-color: #4CAF50;
+    color: white;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+input[type="submit"]:hover {
+    background-color: #45a049;
+}
+
+/* Estilo para los mensajes de error */
+.error-message {
+    color: rgba(255, 0, 0, 0.383);
 }

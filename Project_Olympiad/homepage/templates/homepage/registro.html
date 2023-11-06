@@ -1,0 +1,33 @@
+{% extends "homepage/base.html" %}
+{% load static %}
+
+{% block title %}
+Registro
+{% endblock title %}
+
+{% block content %}
+<div>
+    <section id="registro">
+        <div>
+            <form class="form" method="post">
+                {% csrf_token %}
+                {{ form.as_p }}
+            
+                <button type="submit" id="submit">Registrar</button>
+            </form>
+        </div>  
+    </section>
+</div>
+
+<section id="registro">
+    <div>
+        <form class="form" method="post">
+            {% csrf_token %}
+            {{ form.as_p }}
+        
+            <button type="submit" id="submit">Registrar</button>
+        </form>
+    </div>  
+</section>
+
+{% endblock %}
